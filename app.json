@@ -4,7 +4,6 @@
     "slug": "Empreendix.Mobile",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/logots.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
@@ -20,7 +19,8 @@
         "foregroundImage": "./assets/logots.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.anonymous.Empreendix.Mobile"
     },
     "web": {
       "favicon": "./assets/logots.png"

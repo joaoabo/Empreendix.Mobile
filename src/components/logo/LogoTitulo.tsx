@@ -5,7 +5,7 @@ export default function LogoTitulo(){
     return(
         <View>
             <Image 
-            source={require("../../assets/logots.png")} 
+            source={require("../../../assets/logots.png")} 
             style={styles.logoHome}
             resizeMode="contain" />
         </View>

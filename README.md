@@ -19,7 +19,7 @@ Este app foi desenvolvido com fins **educacionais**, com a proposta de explorar 
 ## 🧩 Tecnologias Utilizadas
 
 - **React Native** (com ou sem Expo)
-- **SQLite** ou **PouchDB** (armazenamento local)
+- **Banco Opcional - Realm** (armazenamento local)
 - **Context API / Zustand** (estado global)
 - **TypeScript** (segurança de tipos)
 - **React Navigation** (navegação entre telas)
@@ -48,10 +48,13 @@ Este app foi desenvolvido com fins **educacionais**, com a proposta de explorar 
 ```bash
 EmpreendixApp/
 ├── src/
-│   ├── components/
+│   ├── api/
+│   ├── config/
+│   ├── context/
+│   ├── hooks/
+│   ├── models/
 │   ├── screens/
 │   ├── services/
 │   ├── storage/
-│   ├── context/
 │   ├── navigation/
-│   └── App.tsx
+│   ├── components/
