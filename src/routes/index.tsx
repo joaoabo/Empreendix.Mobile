@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SplashScreen from '../screens/splash/SplashScreen';
-import TabRoutesPrivada from './tab.routes';
 import TabRoutesPublica from './tab.routes';
 import OTPLogin from '../screens/controleUsuario/OTPLogin';
-import Home from '../screens/home/Home';
+import DrawerRoutes from './drawer.routes';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,18 +21,20 @@ export default function Routes() {
   }, []);
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {showSplash ? (
-          <Stack.Screen name="Splash" component={SplashScreen} />
-        ) : (
-          <>
-            <Stack.Screen name="Tabs" component={TabRoutesPublica} />
-            <Stack.Screen name="OTPLogin" component={OTPLogin} />
-            <Stack.Screen name="Home" component={Home} />
-          </>
-        )}
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          {showSplash ? (
+            <Stack.Screen name="Splash" component={SplashScreen} />
+          ) : (
+            <>
+              <Stack.Screen name="Tabs" component={TabRoutesPublica} />
+              <Stack.Screen name="OTPLogin" component={OTPLogin} />
+              <Stack.Screen name="DrawerRoutes" component={DrawerRoutes} />
+            </>
+          )}
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 }

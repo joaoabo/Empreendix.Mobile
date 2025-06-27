@@ -17,13 +17,13 @@ export default function Login() {
   const [nome, setNome] = useState('');
 
   const handleNext = async () => {
-    try {
-      const { id } = await login(nome, email);
-      navigation.navigate('OTPLogin', { email, Id_otp: id });
-    } catch (error) {
-      console.error(error);
-      alert('Erro ao iniciar o login');
-    }
+    // try {
+    //   const { id } = await login(nome, email);
+    //   navigation.navigate('OTPLogin', { email, Id_otp: id });
+    // } catch (error) {
+    //   console.error(error);
+    //   alert('Erro ao iniciar o login');
+    // }
   };
 
   return (
@@ -49,7 +49,7 @@ export default function Login() {
 
       <Button
         mode="contained"
-        onPress={handleNext}
+        onPress={() => navigation.navigate('OTPLogin', { email, Id_otp: '123456' })}
         style={styles.button}
         disabled={!email.includes('@')}
       >

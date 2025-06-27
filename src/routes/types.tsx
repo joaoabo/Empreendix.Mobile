@@ -1,11 +1,11 @@
 export type PublicStackParamList = {
   Login: undefined;
   OTPLogin: { email: string; Id_otp: string };
-  Home: undefined;
+  DrawerRoutes: undefined;
 };
 
 export type TabParamList = {
-  Home: undefined;
+  HomeAcesso: undefined;
   Login: undefined;
 };
 

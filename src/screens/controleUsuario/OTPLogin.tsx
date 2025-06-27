@@ -8,7 +8,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { validarOtp } from '../../services/authService';
 
 type OTPLoginRouteProp = RouteProp<PublicStackParamList, 'OTPLogin'>;
-type NavigationProp = NativeStackNavigationProp<PublicStackParamList, 'Home'>;
+type NavigationProp = NativeStackNavigationProp<PublicStackParamList, 'DrawerRoutes'>;
 
 
 export default function OTPLogin() {
@@ -29,17 +29,18 @@ export default function OTPLogin() {
     };
 
     const handleVerify = async () => {
-        const codigo = otp.join('');
-        if (codigo.length < 6) return alert('Digite os 6 dígitos');
+        navigation.replace('DrawerRoutes');
+        // const codigo = otp.join('');
+        // if (codigo.length < 6) return alert('Digite os 6 dígitos');
 
-        const sucesso = await validarOtp(Id_otp, codigo);
-        console.log("Vendo resultado no arquivo OTPLogin:", sucesso)
+        // const sucesso = await validarOtp(Id_otp, codigo);
+        // console.log("Vendo resultado no arquivo OTPLogin:", sucesso)
 
-        if (sucesso) {
-            navigation.replace('Home');
-        } else {
-            alert('Código inválido ou expirado');
-        }
+        // if (sucesso) {
+        //     navigation.replace('Home');
+        // } else {
+        //     alert('Código inválido ou expirado');
+        // }
     };
 
 
