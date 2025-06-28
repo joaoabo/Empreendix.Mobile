@@ -22,8 +22,8 @@ export default function GraficosBarras() {
                 yAxisSuffix=""
                 chartConfig={{
                   backgroundColor: '#fff',
-                  backgroundGradientFrom: '#806a99',
-                  backgroundGradientTo: '#806a99',
+                  backgroundGradientFrom: '#fff',
+                  backgroundGradientTo: '#fff',
                   decimalPlaces: 0,
                   color: (opacity = 1) => `rgba(34, 6, 65, ${opacity})`,
                   labelColor: () => '#220641',

@@ -1,14 +1,15 @@
 import { Text, View } from 'react-native';
 import { styles } from './stylesDashboard'
 import GraficosBarras from '../../components/graficos/GraficoBarras';
-import CardInfo from '../../components/cards/CardInfo';
+import CardInfoWhite from '../../components/cards/CardInfoWhite';
 
 export default function Dashboard() {
   return (
     <View style={styles.container}>
-      <Text>Teste!</Text>
+      <Text style={styles.titulo}>Gráfico de Vendas</Text>
       <GraficosBarras/>
-      <CardInfo/>
+      <CardInfoWhite/>
     </View>
   );
 }
+

@@ -4,7 +4,10 @@ import { Text, Card } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 import { InfoCard } from '../../routes/types';
 
-export default function CardInfo() {
+
+
+
+export default function CardInfoWhite() {
     const data: {
         vendas: InfoCard[];
         orcamento: InfoCard[];
@@ -19,7 +22,7 @@ export default function CardInfo() {
     return (
         <View>
             {cards.map((item, index) => (
-                <Card key={index} style={{ marginBottom: 16, backgroundColor: '#220641' }}>
+                <Card key={index} style={styles.cardsDash}>
                     <Card.Content>
                         <Text variant="titleMedium" style={styles.titulo}>{item.titulo}</Text>
                         <Text variant="bodyMedium" style={styles.textoValor}>{item.resultado}</Text>
@@ -30,36 +33,18 @@ export default function CardInfo() {
     )
 }
 
-export const CardStatico = () => {
-    return (
-        <View>
-            <Card style={styles.containerCard}>
-                <Card.Content style={{ alignItems: 'center' }}>
-                    <Text style={{ color: '#e6b800', fontSize: 21, marginBottom: 16, }}>Quer elevar seu negócio?</Text>
-                    <Text style={{ color: '#fff', fontSize: 18, marginBottom: 14 }}>Gerencie tudo de forma Profissional!</Text>
-                    <Text style={{ color: '#fff', fontSize: 18 }}>Faça seu cadastro e aproveite a experiência!</Text>
-                </Card.Content>
-            </Card>
-        </View>
-    )
-}
-
 export const styles = StyleSheet.create({
-    containerCard: {
-        textAlign: 'center',
-        height: 150,
-        marginBottom: 16,
-        backgroundColor: '#333',
-    },
     titulo: {
-        color: '#fff',
+        color: '#220641',
         fontSize: 18
     },
     textoValor: {
-        color: '#fff'
+        color: '#220641'
     },
     cardsDash: {
     backgroundColor: '#fff',
-    color: '#220641'
+    marginBottom: 16,
+    color: '#220641',
+    width: 380
   }
 });
